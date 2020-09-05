@@ -1,0 +1,22 @@
+{
+    "id": "spotify",
+    "version": "1.0.0",
+    "name": "Spotify Album",
+    "description": "Add your Spotify playlist to your HumHub dashboard.",
+    "humhub": {
+        "minVersion": "1.4"
+    },
+    "keywords": ["spotify", "module"],
+    "screenshots": ["resources/Screenshot_1.png", "resources/Screenshot_2.png"],
+    "homepage": "https://github.com/GreenMeteor",
+    "issues": "https://github.com/GreenMeteor/humhub-spotify-module/issues",
+    "authors": [
+        {
+            "name": "Green Meteor",
+            "email": "GreenMeteor@asia.com",
+            "homepage": "https://github.com/GreenMeteor",
+            "role": "Developer"
+        }
+    ]
+
+}
