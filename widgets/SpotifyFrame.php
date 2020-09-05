@@ -18,7 +18,7 @@ class SpotifyFrame extends Widget
      */
     public function run()
     {
-        $url = Yii::$app->getModule('spotify')->getServerUrl() . '/embed/album/';
+        $url = Yii::$app->getModule('spotify')->getServerUrl() . '/';
 
         if (!$url) {
             return '';
