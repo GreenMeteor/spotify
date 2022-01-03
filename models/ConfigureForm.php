@@ -29,7 +29,7 @@ class ConfigureForm extends Model
     public function attributeLabels()
     {
         return [
-            'serverUrl' => Yii::t('SpotifyModule.base', 'Discord Widget URL:'),
+            'serverUrl' => Yii::t('SpotifyModule.base', 'Spotify Widget URL:'),
         ];
     }
 
