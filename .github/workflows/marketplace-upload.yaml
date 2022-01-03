@@ -1,0 +1,27 @@
+on:
+  push:
+    tags:
+    - 'v*'
+
+name: Upload to HumHub Marketplace
+
+jobs:
+  build:
+    name: Build and Upload Module Package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with: 
+          path: spotify
+
+      - name: Build project
+        run: |
+          zip -r spotify.zip spotify/
+          
+      - name: Upload Package to HumHub Marketplace
+        run: |
+          curl --fail \
+          -F "key=${{secrets.MARKETPLACE_API_KEY}}" \
+          -F "ModuleVersionUpload[zipFile]=@spotify.zip" \
+          https://api.humhub.com/v1/marketplace/upload?moduleId=spotify
