@@ -13,7 +13,7 @@ use humhub\widgets\PanelMenu;
   <div class="panel-body">
 
 <?= Html::beginTag('div') ?>
-<iframe src="<?= $spotify; ?>" <?= Html::nonce() ?> width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<iframe src="<?= $spotify; ?>" <?= Html::nonce() ?> width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" sandbox="allow-same-origin allow-scripts allow-popups"></iframe>
 <?= Html::endTag('div'); ?>
 </div>
 </div>
