@@ -1,5 +1,4 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/greenmet/public_html/protected/modules/spotify/messages/ja/base.php
-    - /bin/cp base.php $DEPLOYPATH
+    - /bin/cp base.php /home/greenmet/public_html/protected/modules/spotify/messages/ja/base.php
