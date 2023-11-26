@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/user/public_html/protected/modules/spotify
-    - /bin/cp -R * $DEPLOYPATH
+    - export DEPLOYPATH=/home/user/public_html/protected/modules/spotify/messages/ja/base.php
+    - /bin/cp base.php $DEPLOYPATH
