@@ -1,10 +1,10 @@
 {
     "id": "spotify",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "name": "Spotify Album",
     "description": "Add your Spotify playlist to your HumHub dashboard.",
     "humhub": {
-        "minVersion": "1.4"
+        "minVersion": "1.18"
     },
     "keywords": ["spotify", "module"],
     "screenshots": ["resources/Screenshot_1.png", "resources/Screenshot_2.png"],
