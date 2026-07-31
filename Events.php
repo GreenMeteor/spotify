@@ -4,6 +4,8 @@ namespace humhub\modules\spotify;
 
 use Yii;
 use yii\helpers\Url;
+use humhub\modules\ui\menu\MenuLink;
+use humhub\modules\ui\icon\widgets\Icon;
 
 class Events
 {
@@ -12,13 +14,13 @@ class Events
      */
     public static function onAdminMenuInit($event)
     {
-        $event->sender->addItem([
+        $event->sender->addEntry(new MenuLink([
             'label' => Yii::t('SpotifyModule.base', 'Spotify Settings'),
             'url' => Url::toRoute('/spotify/admin/index'),
-            'icon' => '<i class="fa fa-spotify"></i>',
-            'isActive' => Yii::$app->controller->module && Yii::$app->controller->module->id == 'spotify' && Yii::$app->controller->id == 'admin',
+            'icon' => Icon::get('fa-spotify'),
+            'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'spotify' && Yii::$app->controller->id == 'admin'),
             'sortOrder' => 650
-        ]);
+        ]));
     }
 
     /**
