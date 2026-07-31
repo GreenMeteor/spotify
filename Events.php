@@ -4,10 +4,8 @@ namespace humhub\modules\spotify;
 
 use Yii;
 use yii\helpers\Url;
-use yii\base\BaseObject;
-use humhub\models\Setting;
 
-class Events extends BaseObject
+class Events
 {
     /**
      * @param $event yii\base\Event
@@ -17,7 +15,6 @@ class Events extends BaseObject
         $event->sender->addItem([
             'label' => Yii::t('SpotifyModule.base', 'Spotify Settings'),
             'url' => Url::toRoute('/spotify/admin/index'),
-            'group' => 'settings',
             'icon' => '<i class="fa fa-spotify"></i>',
             'isActive' => Yii::$app->controller->module && Yii::$app->controller->module->id == 'spotify' && Yii::$app->controller->id == 'admin',
             'sortOrder' => 650
@@ -34,7 +31,7 @@ class Events extends BaseObject
         }
 
         $event->sender->addWidget(widgets\SpotifyFrame::class, [], [
-            'sortOrder' => Setting::Get('timeout', 'spotify')
+            'sortOrder' => '600'
         ]);
     }
 }
