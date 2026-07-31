@@ -1,7 +1,7 @@
 <?php
 
-use yii\bootstrap\ActiveForm;
-use yii\helpers\Html;
+use humhub\modules\widgets\form\ActiveForm;
+use humhub\helpers\Html;
 
 ?>
 
